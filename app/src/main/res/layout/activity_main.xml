@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- EditText для ввода числителя и знаменателя первой дроби -->
+    <EditText
+        android:id="@+id/numerator1EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Числитель 1"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/denominator1EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Знаменатель 1"
+        android:layout_below="@id/numerator1EditText"
+        android:layout_margin="16dp"/>
+
+    <!-- EditText для ввода числителя и знаменателя второй дроби -->
+    <EditText
+        android:id="@+id/numerator2EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Числитель 2"
+        android:layout_below="@id/denominator1EditText"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/denominator2EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Знаменатель 2"
+        android:layout_below="@id/numerator2EditText"
+        android:layout_margin="16dp"/>
+
+    <!-- Кнопки для арифметических операций -->
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="73dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/denominator2EditText"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/denominator2EditText"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/plusButton"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/denominator2EditText"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/minusButton"
+        android:text="×" />
+
+    <!-- Кнопка для конвертации в десятичную дробь -->
+    <Button
+        android:id="@+id/divideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/denominator2EditText"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/multiplyButton"
+        android:text="÷" />
+
+    <!-- Поля для вывода результатов -->
+
+    <TextView
+        android:id="@+id/wholeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/plusButton"
+        android:layout_marginTop="60dp"
+        android:text="Целая часть:" />
+
+    <TextView
+        android:id="@+id/numeratorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Числитель:"
+        android:layout_below="@id/wholeTextView"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/denominatorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Знаменатель:"
+        android:layout_below="@id/numeratorTextView"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/fullNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/denominatorTextView"
+        android:layout_marginTop="16dp"
+        android:text="Дробный вид:" />
+
+</RelativeLayout>
